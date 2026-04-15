@@ -4,7 +4,7 @@ import { POINTS, computeBadges } from "../utils/points.js";
 
 export async function createPost(req, res) {
   const { content } = req.validated.body;
-  const photoUrl = req.file ? (req.file.path || `/uploads/${req.file.filename}`) : null;
+  const photoUrl = req.file ? (req.file.path || `/uploads/${req.file.filename}`) : undefined;
 
   const post = await FeedPost.create({
     author: req.user._id,
