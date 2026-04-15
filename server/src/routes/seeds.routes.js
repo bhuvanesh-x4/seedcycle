@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { requireAuth } from "../middleware/auth.js";
-import { upload } from "../middleware/cloudinary-upload.js";
+import { upload } from "../middleware/upload.js";
 import { validate } from "../middleware/validate.js";
 import { seedCreateSchema, seedNearSchema } from "./_schemas.js";
 import {
