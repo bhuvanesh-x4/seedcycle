@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { requireAuth } from "../middleware/auth.js";
 import { validate } from "../middleware/validate.js";
-import { upload } from "../middleware/cloudinary-upload.js";
+import { upload } from "../middleware/upload.js";
 import { feedCreateSchema, feedUpdateSchema } from "./_schemas.js";
 import { createPost, deletePost, listPosts, updatePost } from "../controllers/feed.controller.js";
 
