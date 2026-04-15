@@ -10,7 +10,7 @@ export async function createListing(req, res) {
   const point = toPoint(lng, lat);
   if (!point) return res.status(400).json({ message: "Invalid coordinates" });
 
-  const photoUrl = req.file ? (req.file.path || `/uploads/${req.file.filename}`) : null;
+  const photoUrl = req.file ? (req.file.path || `/uploads/${req.file.filename}`) : undefined;
 
   const listing = await SeedListing.create({
     owner: req.user._id,
